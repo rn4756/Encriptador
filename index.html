@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    
+    <main class="cuerpo">
+
+        <section class="cuerpo-encriptacion">
+            
+                        <textarea id="valorUsuario" class="cuerpo-encriptacion-texto" placeholder="Ingrese el texto aqui"></textarea>
+            
+
+                 <div class="cuerpo-encriptacion-advertencia">
+                     <img src="./imagenes/signo_de_exclamacion.png" alt="simbolo de exclamacion">
+                     <p class="cuerpo-encriptacion-advertencia-texto">Solo letras en minusculas y sin acento</p>
+                 </div>
+
+                <div class="cuerpo-encriptacion-botones">
+                    <button onclick="encriptar();"| class="boton">Encriptar</button> <!--se activo el boton usando onclick y el funcionamiento esta dado por a funcion intentoDeUsuario-->
+                    <button onclick="desencriptar();"| class="boton">Desencriptar</button>
+                </div>
+
+        </section>
+            
+        <section class="resultado">
+
+            <div id="resultado-vacio">
+                 <img src="./imagenes/Muñeco.png" alt="gorro de detective y lupa" class="resultado-imagen">
+                 <h1 class="resultado-control">Ningun mensaje fue encontrado </h1>
+                 <p class="resultado-control-indicacion">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
+
+            <div id="resultado-completado">
+                <p class="resultado-completado-texto" id="textoResultado"></p>
+                 <div class="resultado-completado-boton">
+                    <button onclick="verificarIntento();"| class="boton">Copiar</button>
+                    <button onclick="limpiar();"| class="boton">Limpiar</button>
+                  
+
+                </div>
+
+             </div>
+             
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+         <p> Desarrollado por Alura Latam</p>
+    </footer>
+
+    <script src="apps.js" defer></script>
+</body>
+</html>

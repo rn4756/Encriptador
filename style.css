@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Declaro una variable */
+:root {
+   --color-primario:#2b0c46;
+    --color-secundario:#302d2dab;
+    --color-terciario:#f9fbfc;
+    --color-cuaternario:#965fcc;
+    --color-quinario:#000000;
+    --fuente-inter:'Inter', sans-serif;
+    --fuente-krona:'Krona One', sans-serif;
+     
+ }
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    max-height: 100%;
+    
+}
+
+
+.cuerpo {
+    padding: 6% 10% ;/*margin crea espacio fuera del elemento, es decir, entre el elemento y otros elementos que lo rodean.
+    padding crea espacio dentro del elemento, es decir, entre el borde del elemento y su contenido.*/
+    display: flex;
+    justify-content: space-between;
+    gap:82px;/*modificar estos valores*/
+    
+}
+
+.cuerpo-encriptacion{
+    width: 600%;
+    height: 65vh;/*mpermie que este todo en la misma pagina*/
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.cuerpo-encriptacion-texto{
+width: 100%;
+height: 80%; /* Ajusta la altura del textarea */
+padding: 1rem;
+font-family: var(--fuente-inter);
+font-size: 1.25rem;
+color: var(--color-terciario); /* Color del texto */
+background-color: var(--color-secundario); /* Color de fondo del textarea */
+outline: none;
+resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+text-align: left; /* Alinea el texto a la izquierda */
+overflow-wrap: break-word; /* Rompe la palabra si es muy larga */
+border-color:var(--color-quinario);
+border-radius: 1%;
+
+}
+
+.cuerpo-encriptacion-texto::placeholder {
+    color: var(--color-terciario); 
+}
+
+.cuerpo-encriptacion-advertencia{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    
+}
+
+.cuerpo-encriptacion-advertencia-texto{
+    margin: 0.5vh 0%;
+    font-size: 1rem;/*modificar esta medida de texto*/
+    font-family: var(--fuente-inter);
+    color:var(--color-terciario);
+  
+}
+
+.cuerpo-encriptacion-botones{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 10px;
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    padding-right: 10px; 
+    
+}
+
+.boton{
+    width: 60%;
+    height: 8vh;
+    border-radius: 5%;
+    background-color:var(--color-cuaternario) ;
+    font-size: 1rem;
+    font-weight: 50%;
+    padding: 15px;
+    color: var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  
+}
+
+
+
+.resultado {
+    background-color: var(--color-secundario);
+    height: 65vh;
+    width: 250%;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+#resultado-completado{
+    display: none;
+}
+
+#resultado-vacio{
+    display: block;
+}
+
+.resultado-vacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.resultado-imagen{
+    padding:30% 30% 10%;
+    height: 10vh;
+    justify-content: center;
+}
+
+.resultado-control {
+    padding: 5%;
+    font-family: var(--fuente-inter);
+    font-weight: bold;
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+.resultado-control-indicacion {
+    padding: 2vh;
+    font-family: var(--fuente-inter);
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+.resultado-completado{
+    height: 10%;
+}
+.resultado-completado-texto {
+    max-width:100% ;
+    height: 120%;
+    padding: 10%;
+    font-family: var(--fuente-inter);
+    font-size: 1.25rem;
+    color: var(--color-terciario);
+    background-color: transparent;
+    outline: none;
+    text-align: left;
+    overflow-wrap: break-word;
+    display: flex;
+   
+ 
+}
+
+.resultado-completado-boton {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 167%;
+    
+}
+
+
+.footer{
+    background-color:var(--color-terciario) ;
+    padding: 0.5rem;
+    color:var(--color-primario) ;
+    text-align: center;
+    font-family:var(--fuente-monserrat) ;
+    font-size: 1.5rem;
+    font-weight: 400;
+    }
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape){
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .cuerpo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;/*cuidado*/
+        padding: 2%;
+        gap: 10px;
+    }
+    
+    .cuerpo-encriptacion{
+        height: 75vh;
+        width: 100%;
+        padding: 5%;
+        padding-left: 5%;
+        display: flex;
+        justify-content:center;
+    }
+
+    .resultado{
+        height: 18vh;
+        display: flex;
+        flex-direction: column;
+        width: 100%;/*cuidado*/
+       
+    }
+    
+
+    .resultado-control{
+        font-size: 1.2rem;
+    }
+
+    .resultado-control-indicacion{
+        font-size: 0.9rem;
+    }
+
+    .resultado-imagen{
+        display: none;
+    }
+
+    .boton{
+        padding: 7px;
+    }
+
+   .footer{
+    display: none;
+   }
+
+}
+
+@media (max-width: 1000px){
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .cuerpo{
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        gap: 3px;
+        height: auto;
+        width: auto;
+    }
+   
+    .cuerpo-encriptacion{
+        height: 65vh;
+        width: auto;
+        padding: 5%;
+        padding-left: 5%;
+        display: flex;
+        justify-content:center;
+        gap: 5px;
+    }
+
+    .cuerpo-encriptacion-advertencia-texto{
+        font-size: 0.5rem;
+    }
+
+    .cuerpo-encriptacion-botones{
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .boton{
+        padding: 5px;
+        height: auto;
+        font-size: 0.7rem;
+       
+    }
+
+    .resultado{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        width: auto;/*cuidado*/
+        gap: 4px;
+        padding: 3%;
+       
+    }
+    .resultado-vacio{
+        width: auto;
+        padding: 3%;
+    }
+
+   
+    .resultado-control{
+        font-size: 1.2rem;
+    }
+
+    .resultado-control-indicacion{
+        font-size: 0.7rem;
+    }
+    .resultado-imagen{
+        display: none;
+    }
+
+    .resultado-completado{
+        width: 80%;
+        height: auto;
+        padding: 3%;
+        gap: 10px;
+    }
+    .resultado-completado-texto{
+        height: auto;
+        padding: 5%;
+
+        font-size: 0.8rem;
+
+    }
+    .resultado-completado-boton{
+        height: 5%;
+    }
+
+
+
+   .footer{
+    display: none;
+   }
+
+
+}
+/*
+em es como un metro que se adapta al tamaño de cada habitación. Si la habitación es grande, el metro también será grande. Si la habitación es pequeña, el metro también será pequeño. En CSS, em se basa en el tamaño de fuente del elemento padre. Si el padre tiene un tamaño de fuente de 16px, 1em será igual a 16px. Si el padre tiene un tamaño de fuente de 20px, 1em será igual a 20px.
+
+rem es como un metro estándar que siempre tiene la misma medida, sin importar el tamaño de la habitación. En CSS, rem se basa en el tamaño de fuente del elemento raíz (el <html>). Si el tamaño de fuente del <html> es 16px, 1rem siempre será igual a 16px, sin importar el tamaño de fuente del elemento padre.
+
+¿Cuándo usar cada uno?
+
+em es ideal para crear relaciones de tamaño entre elementos que están anidados dentro del mismo padre. Por ejemplo, si quieres que un título sea 1.5 veces más grande que el texto del párrafo, puedes usar em para el título.
+
+rem es ideal para crear un tamaño de fuente consistente en todo el sitio web, sin importar la jerarquía de los elementos. Por ejemplo, si quieres que todos los títulos de nivel 1 tengan un tamaño de fuente de 24px, puedes usar rem para el título.
+
+Ejemplo:
+
+Imagina que tienes un párrafo con un tamaño de fuente de 16px y un título dentro de ese párrafo con un tamaño de fuente de 2em. El título tendrá un tamaño de fuente de 32px (16px * 2).
+
+Ahora, imagina que tienes un título con un tamaño de fuente de 2rem. El título tendrá un tamaño de fuente de 32px (16px * 2), sin importar el tamaño de fuente del elemento padre.
+
+https://www.aluracursos.com/blog/guia-de-unidades-en-css
+
+*/
