@@ -88,7 +88,14 @@ console.log('Valor ingresado:', valor);
   
 }
 
+function copiarTexto(idElemento){
+    const textoElemento = document.getElementById(idElemento);
 
+    navigator.clipboard.writeText(texto.Elemento.textContent)
+    .catch(function(err){
+        console.error('Error al copiar el texto:',err);
+    });
+}
  
 
 
